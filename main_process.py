@@ -200,10 +200,10 @@ if __name__ == "__main__":
             assert int(val) > 0
             params['kbest_thresh'] = int(val)
         elif arg == '--alpha':
-            assert int(val) in [i*10 in range(,11)]
+            assert int(val) in [i*10 for i in range(0,11)]
             params['alpha'] = int(val)
         elif arg == '--beta':
-            assert int(val) in [i*10 in range(1,10)]
+            assert int(val) in [i*10 for i in range(1,10)]
             params['beta'] = int(val)
         elif arg == '--10fold':
             fun = run_10cross_val
